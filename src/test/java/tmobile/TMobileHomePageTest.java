@@ -42,7 +42,7 @@ public class TMobileHomePageTest
 		capabilities.setCapability("version", "latest");
 		capabilities.setCapability("username", username);
 		capabilities.setCapability("accessKey", accessKey);
-		capabilities.setCapability("build", "t-mobile demo");
+		capabilities.setCapability("build", System.getenv("BUILD_TAG"));
 		capabilities.setCapability("name", testName.getMethodName());
 
 		driver = new RemoteWebDriver(url, capabilities);
